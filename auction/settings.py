@@ -9,7 +9,7 @@ SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
 CORS_ALLOWED_ORIGINS = [
     'http://127.0.0.1:5173',
     'http://localhost:5173',
-    '*',
+    'http://*',
 ]
 
 
@@ -24,7 +24,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 # Application definition
-CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:5173', 'http://localhost:5173', '*',]
+CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:5173', 'http://localhost:5173', 'http://*',]
 
 INSTALLED_APPS = [
     "django_crontab",
