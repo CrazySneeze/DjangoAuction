@@ -2,12 +2,12 @@
 <script lang="ts">
 import Answer from './Answer.vue';
 import PostQuestion from './postQuestion.vue';
-
-    export default {
+var _getResult: {answer: [{question: string, answer: string, id: number},], isOwner: boolean}
+export default {
     props: ["itemId"],
     data() {
         return {
-            getResult: null,
+            getResult: _getResult,
         };
     },
     methods: {
@@ -21,6 +21,7 @@ import PostQuestion from './postQuestion.vue';
                 }
                 const data = await res.json();
                 this.getResult = data;
+                console.log(data.answer[0]);
             }
             catch (err) {
                 console.error(err);

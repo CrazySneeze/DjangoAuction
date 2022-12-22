@@ -1,8 +1,5 @@
 
 <!-- Fetches all the listings on the system, with attributes related to that item -->
-
-
-
 <template>
     <input class="bg-light text-dark" required placeholder= 'search' ref="searchField"/>
     <button class="bg-info text-white" v-on:click="search">SEARCH</button>
@@ -41,10 +38,11 @@
 
 <script lang="ts">
 import Vue from 'vue';
+var _items: {item:[{image: string, name: string, desc: string, start_time: string, end_time: string, start_price: number, cur_price: number, id: number,}]}
     export default {
         data(){
             return {
-                items: [] ,
+                items: _items,
                 active: false,
                 media: 'http://127.0.0.1:8000/media/',
                 showItem: false,
@@ -52,10 +50,6 @@ import Vue from 'vue';
                 componentKey: 0,
                 searchData: '-',
             }
-
-
-
-
         },
         created(){
             this.fetchListings()
@@ -63,24 +57,24 @@ import Vue from 'vue';
 
         methods: {
             search(){
-                if (this.$refs.searchField.value.length > 0){
-                this.searchData = (this.$refs.searchField.value as string);
+                if ((this.$refs.searchField as any).value.length > 0){
+                this.searchData = ((this.$refs.searchField as any).value as string);
             }
             else{
               this.searchData = '-';
             }
             this.fetchListings();
             },
-            getImage(item){
+            getImage(item: any){
                 console.log(item.image.slice(1,-1));
                return item.image.slice(1,-1)
             },
 
-            getStartDate(date){
+            getStartDate(date: any){
                 return date.slice(0, 10)
             },
 
-            getEndTime(date){
+            getEndTime(date: any){
                 let cal_date = date.slice(0, 10)
                 let time = date.slice(12, 16)
                 return (cal_date.concat(' at ',time))

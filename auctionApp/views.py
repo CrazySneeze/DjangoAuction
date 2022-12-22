@@ -274,7 +274,7 @@ def listings_api(request, searchData) -> HttpResponse:
     cur_user = request.user
     item = Item.objects.all()
 
-    if searchData != "-" or searchData != "":
+    if searchData != "-":
         item = Item.objects.all().filter(Q(name__icontains=searchData) | Q(desc__icontains=searchData))
     
     items = []

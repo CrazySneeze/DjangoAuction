@@ -3,21 +3,22 @@
 import Bid from './Bid.vue';
 import Question from './Question.vue';
 import Vue from 'vue';
-
+var _getItemData: [{image: string, name: string, desc: string, start_time: string, end_time: string, start_price: number, cur_price: number},];
+var _getUserData: [{first_name: string, last_name: string},]
     export default{
     props: ["itemId"],
     data() {
         return {
             getResult: false,
-            getItemData: null,
-            getUserData: null,
-            image: null,
+            getItemData: _getItemData,
+            getUserData: _getUserData,
+            image: Image,
             media: 'http://127.0.0.1:8000/media/',
         };
     },
     methods: {
         //fetches data attribute and cleans it to be in 'date at time' format
-        getDateTime(date){
+        getDateTime(date: any){
                 let cal_date = date.slice(0, 10)
                 let time = date.slice(12, 16)
                 return (cal_date.concat(' at ',time))

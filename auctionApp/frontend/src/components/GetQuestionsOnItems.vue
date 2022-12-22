@@ -2,11 +2,12 @@
 <script lang="ts">
 import Answer from './Answer.vue';
 import GetItem from './getItem.vue';
+var _getResult: [{question: [{question: string}],answer: string, id: number}]
     export default {
     props: ["userId"],
     data() {
         return {
-            getResult: null,
+            getResult: _getResult,
         };
     },
     methods: {

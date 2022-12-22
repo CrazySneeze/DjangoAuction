@@ -30,7 +30,7 @@
     export default {
         data(){
             return {
-                user: [],
+                user: {image: String, username: String, email: String, DOB: String},
                 media: 'http://127.0.0.1:8000/media/',
             }
         },
@@ -47,8 +47,8 @@
                     'credentials': "include",})
                     let data = await response.json()
                     this.user = data.cur_user_data
-                    this.user.image = this.user.image.slice(1, -1)
-                    console.log(dat)
+                    this.user.image = (this.user.image as any).slice(1, -1)
+                    console.log(data)
 
                 }
                     catch(error){

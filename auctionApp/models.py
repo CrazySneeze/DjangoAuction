@@ -21,7 +21,7 @@ class User(AbstractUser):
             'email': self.email,
             'username': self.username,
             'DOB': self.DOB,
-            'image':json.dumps(str(self.image))
+            'image': json.dumps(str(self.image))
         }
 
     def get_username(self):

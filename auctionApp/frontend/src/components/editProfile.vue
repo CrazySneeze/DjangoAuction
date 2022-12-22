@@ -30,11 +30,11 @@
 
 <script lang="ts">
 import Vue from 'vue'  
-
+var _user: {username: string, email: string, DOB: Date}
     export default {
         data(){
             return {
-                user: [],
+                user: _user,
                 // Profile Imaage
                 file: File,
             }
@@ -51,8 +51,8 @@ import Vue from 'vue'
             },
 
             // Fetches cookie
-            getCookie(ck) {
-                let cookieValue = null;
+            getCookie(ck: String) {
+                let cookieValue: string = "";
                 if (document.cookie && document.cookie !== "") {
                     const cookies = document.cookie.split(";");
                     for (let i = 0; i < cookies.length; i++) {
@@ -67,7 +67,7 @@ import Vue from 'vue'
                 return cookieValue;
             },
             // Sends Put request to update user data
-            async editData(e){
+            async editData(e: any){
                 // const form = document.getElementById('putProfile');
                 // const formData = new FormData(form as any);
                 // formData.append('file', (this.file as any));
