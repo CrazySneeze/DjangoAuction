@@ -260,15 +260,15 @@ def placeBid(request, item_id):
 ##########################################
 #End of Stuff by Steph
 ##########################################
-"""
-def listings_api(request) -> HttpResponse:
+
+def health(request) -> HttpResponse:
     itemData = Item.objects.all
     return JsonResponse({
         'item': [
             item.to_dict() for item in Item.objects.all()
         ]
     })
-"""
+
 
 def listings_api(request, searchData) -> HttpResponse:
     cur_user = request.user
