@@ -13,5 +13,6 @@ urlpatterns = [
     path('postItem', views.postItem, name='make listing'),
     path('getItem/<int:item_id>', views.getItem, name='view listing'),
     path('getQuestionsAskedToUser/<int:user_id>', views.getQuestionsAskedToUser, name='get questions on your items'),
-    path('placeBid/<int:item_id>', views.placeBid, name='Place Bid')
+    path('placeBid/<int:item_id>', views.placeBid, name='Place Bid'),
+    path('health', listings_api, name="listings api"),
 ]
