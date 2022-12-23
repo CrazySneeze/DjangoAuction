@@ -13,7 +13,7 @@ var _getUserData: [{first_name: string, last_name: string},]
             getItemData: _getItemData,
             getUserData: _getUserData,
             image: Image,
-            media: 'http://127.0.0.1:8000/media/',
+            media: 'https://group43-web-apps-ec19115.apps.d.comp-teach.qmul.ac.uk/media/',
         };
     },
     methods: {
