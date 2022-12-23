@@ -74,7 +74,7 @@ def login_view(request):
             if request.GET.get('next'):
                 return redirect(request.GET.get('next'))
             else:
-                frontend_view(request)
+                return redirect(frontend_view)
         else:
             error_message = 'Incorrect Password and/or Username.'
     return render(request, 'login.html', {'form': form, 'error_message': error_message})
