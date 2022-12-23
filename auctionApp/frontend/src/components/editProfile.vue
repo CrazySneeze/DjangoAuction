@@ -81,7 +81,7 @@ var _user: {username: string, email: string, DOB: Date}
                 }
                     console.log(payload)
 
-                    let res = await fetch(`http://localhost:8000/api/user`, {
+                    let res = await fetch(`https://group43-web-apps-ec19115.apps.d.comp-teach.qmul.ac.uk/api/user`, {
                     'credentials': "include",
                     method: 'PUT',
                     headers: {
@@ -101,7 +101,7 @@ var _user: {username: string, email: string, DOB: Date}
             //Fetches user data and puts it in user[]
             async fetchUser(){
                 try{
-                    let response = await fetch('http://localhost:8000/api/user',{
+                    let response = await fetch('https://group43-web-apps-ec19115.apps.d.comp-teach.qmul.ac.uk/api/user',{
                     'credentials': "include",})
                     let data = await response.json()
                     this.user = data.cur_user_data

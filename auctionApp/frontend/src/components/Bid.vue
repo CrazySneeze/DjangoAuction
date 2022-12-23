@@ -15,7 +15,7 @@
                 try {
                     if (postData.bid != null) {
                         console.log((this.itemId as number));
-                        const res = await fetch(`http://localhost:8000/placeBid/${(this.itemId as number)}`, { 
+                        const res = await fetch(`https://group43-web-apps-ec19115.apps.d.comp-teach.qmul.ac.uk/placeBid/${(this.itemId as number)}`, { 
                             method: "post", 
                             headers: {
                                 "Content-Type": "application/json"

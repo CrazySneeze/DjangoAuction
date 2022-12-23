@@ -31,7 +31,7 @@
         data(){
             return {
                 user: {image: String, username: String, email: String, DOB: String},
-                media: 'http://127.0.0.1:8000/media/',
+                media: 'https://group43-web-apps-ec19115.apps.d.comp-teach.qmul.ac.uk/media/',
             }
         },
         created(){
@@ -43,7 +43,7 @@
             
             async fetchUser(){
                 try{
-                    let response = await fetch('http://localhost:8000/api/user',{
+                    let response = await fetch('https://group43-web-apps-ec19115.apps.d.comp-teach.qmul.ac.uk/api/user',{
                     'credentials': "include",})
                     let data = await response.json()
                     this.user = data.cur_user_data

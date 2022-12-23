@@ -44,7 +44,7 @@ var _items: {item:[{image: string, name: string, desc: string, start_time: strin
             return {
                 items: _items,
                 active: false,
-                media: 'http://127.0.0.1:8000/media/',
+                media: 'https://group43-web-apps-ec19115.apps.d.comp-teach.qmul.ac.uk/media/',
                 showItem: false,
                 itemToDisplay: 0,
                 componentKey: 0,
@@ -84,7 +84,7 @@ var _items: {item:[{image: string, name: string, desc: string, start_time: strin
 
             async fetchListings(){
                 try{
-                    let response = await fetch(`http://localhost:8000/api/listings/${this.searchData}`)
+                    let response = await fetch(`https://group43-web-apps-ec19115.apps.d.comp-teach.qmul.ac.uk/api/listings/${this.searchData}`)
                     let data = await response.json()
                     this.items = data
                     console.log(this.items)

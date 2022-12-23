@@ -55,7 +55,8 @@ def home_view(request):
     context = {'username': None}
     return render(request, 'home.html', context)
 
-
+def frontend_view(request):
+    return render(request, 'index.html')
 
 
 def login_view(request):

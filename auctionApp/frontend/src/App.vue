@@ -9,7 +9,7 @@
             return {
                 user: [],
                 // Media link - Contains all media (item images, profile pictures)
-                media: 'http://127.0.0.1:8000/media/'
+                media: 'https://group43-web-apps-ec19115.apps.d.comp-teach.qmul.ac.uk/media/'
             }
         },
 
@@ -17,9 +17,9 @@
             // Logs a user out
             async logOut(){
                 try{
-                    let response = await fetch('http://localhost:8000/logout/',{
+                    let response = await fetch('https://group43-web-apps-ec19115.apps.d.comp-teach.qmul.ac.uk/logout/',{
                     'credentials': "include",});
-                    response = await fetch('http://127.0.0.1:8000/logout/',{
+                    response = await fetch('https://group43-web-apps-ec19115.apps.d.comp-teach.qmul.ac.uk/logout/',{
                     'credentials': "include",});
                       console.log("clicked");
                 }

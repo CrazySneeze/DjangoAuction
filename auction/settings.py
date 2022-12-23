@@ -130,6 +130,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = "static/"
+STATIC_ROOT = 'var/static_root/'
+STATICFILES_DIRS = ['static']
 
 INTERNAL_IPS = ['127.0.0.1', 'localhost']
 

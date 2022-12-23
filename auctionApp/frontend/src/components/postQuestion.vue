@@ -15,7 +15,7 @@
                 try {
                     console.log(JSON.stringify(postData))
                     if (postData.question) {
-                        const res = await fetch(`http://localhost:8000/postQuestion/${this.itemId}`, { 
+                        const res = await fetch(`https://group43-web-apps-ec19115.apps.d.comp-teach.qmul.ac.uk/postQuestion/${this.itemId}`, { 
                             method: "post", headers: {
                                 "Content-Type": "application/json"
                             }, 

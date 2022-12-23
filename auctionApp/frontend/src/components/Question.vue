@@ -13,7 +13,7 @@ export default {
     methods: {
         async getQuestion() {
             try {
-                const res = await fetch(`http://localhost:8000/getQuestion/${this.itemId}`, { method: "get" ,
+                const res = await fetch(`https://group43-web-apps-ec19115.apps.d.comp-teach.qmul.ac.uk/getQuestion/${this.itemId}`, { method: "get" ,
                             'credentials': "include",});
                 if (!res.ok) {
                     const message = `An error has occured: ${res.status} - ${res.statusText}`;
