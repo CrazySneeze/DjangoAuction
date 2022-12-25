@@ -27,7 +27,7 @@ var _getUserData: [{first_name: string, last_name: string},]
         //Fetches all fields from item
         async getItem() {
             try {
-                const res = await fetch(`https://group43-web-apps-ec19115.apps.d.comp-teach.qmul.ac.uk/getItem/${this.itemId}`, { method: "get", "credentials": "include", });
+                const res = await fetch(`https://group43-web-apps-ec19115.apps.d.comp-teach.qmul.ac.uk/api/getItem/${this.itemId}`, { method: "get", "credentials": "include", });
                 if (!res.ok) {
                     const message = `An error has occured: ${res.status} - ${res.statusText}`;
                     throw new Error(message);

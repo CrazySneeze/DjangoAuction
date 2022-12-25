@@ -29,7 +29,7 @@
                     answer: (this.$refs.post_answer as any).value,
                 }
                 try {
-                    const res = await fetch(`https://group43-web-apps-ec19115.apps.d.comp-teach.qmul.ac.uk/postAnswer/${this.questionId}`,
+                    const res = await fetch(`https://group43-web-apps-ec19115.apps.d.comp-teach.qmul.ac.uk/api/postAnswer/${this.questionId}`,
                         { method: "post", headers: {"Content-Type": "application/json"}, 
                         body : JSON.stringify(postData),
                         'credentials': "include",

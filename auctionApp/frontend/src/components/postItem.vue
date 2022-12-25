@@ -21,7 +21,7 @@ import { VueElement } from 'vue';
                 const formData = new FormData(form as any);
                 formData.append('file', (this.file as any));
                 try {
-                        const res = await fetch('https://group43-web-apps-ec19115.apps.d.comp-teach.qmul.ac.uk/postItem', { 
+                        const res = await fetch('https://group43-web-apps-ec19115.apps.d.comp-teach.qmul.ac.uk/api/postItem', { 
                             method: "post",
                             body : formData,
                             'credentials': "include",
