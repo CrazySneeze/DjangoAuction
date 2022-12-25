@@ -40,6 +40,7 @@
 
                         this.getResult = data;
                         (this.$parent as any).getQuestion();
+                        (this.$refs.post_question as any).value = '';
                     }
                     else {console.warn("question is empty");}
 
