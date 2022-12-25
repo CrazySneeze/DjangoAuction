@@ -3,12 +3,12 @@
     <header>
       <div class="">
           <b>please post your answer</b>
-          <form id="postAnswer" action="">
+          <form id="postAnswer" action="" @submit.prevent="postAnswer">
               <div class="form-group">
                   <input class="form-control" type="text" name="name" ref="post_answer" placeholder="put your answer here" required/>
               </div>
               <div class="form-group">
-                  <button class="btn btn-primary" @click="postAnswer">SUBMIT</button>
+                  <button class="btn btn-primary">SUBMIT</button>
               </div>
           </form>
         </div>

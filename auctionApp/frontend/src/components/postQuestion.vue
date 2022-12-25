@@ -55,12 +55,12 @@
   <header>
     <div class="">
         <b>please post your question</b>
-        <form id="postQuestion" action="">
+        <form id="postQuestion" action="" @submit.prevent="postQuestion">
             <div class="form-group shadow">
                 <input class="form-control" type="text" name="name" ref="post_question" placeholder="put your question here" required/>
             </div>
             <div class="form-group">
-                <button class="btn btn-primary" @click="postQuestion">SUBMIT</button>
+                <button class="btn btn-primary">SUBMIT</button>
             </div>
         </form>
       </div>

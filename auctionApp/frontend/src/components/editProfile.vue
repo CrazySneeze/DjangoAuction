@@ -6,7 +6,7 @@
         <h1>
             Edit Profile
         </h1>
-        <form id="putProfile" action="">
+        <form id="putProfile" action="" @submit.prevent="editData">
             Username: 
             <input required v-model= user.username name = 'username' />
             <br>
@@ -18,7 +18,7 @@
             <br>
             Profile Image: 
             <input class="form-control" type="file" name="file" ref="post_image" accept="image/png, image/jpeg" @change="handleFileUpload( $event )"/>
-            <button class="btn btn-primary" @click="editData">Update</button>
+            <button class="btn btn-primary">Update</button>
         </form>
 
         

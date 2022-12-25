@@ -57,12 +57,12 @@
   <header>
     <div class="bg-light rounded shadow p-3">
         <b>please enter your bid</b>
-        <form id="postBid" action="">
+        <form id="postBid" action="" @submit.prevent="postBid">
             <div class="form-group shadow rounded">
                 <input class="form-control" type="number" step=".01" name="bid" ref="post_bid" placeholder="10" required/>
             </div>
             <div class="form-group">
-                <button class="btn btn-primary" @click="postBid">SUBMIT BID</button>
+                <button class="btn btn-primary">SUBMIT BID</button>
             </div>
         </form>
       </div>

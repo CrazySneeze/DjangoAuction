@@ -58,7 +58,7 @@ import { VueElement } from 'vue';
   <header>
     <div class="">
         <h1 class="text-light">Your New Listing</h1>
-        <form id="postItem">
+        <form id="postItem"  @submit.prevent="postItem">
             <div class="form-group">
                 <h3 class="text-light">name:</h3>
                 <input class="form-control" type="text" name="name" ref="post_name" placeholder="name" required/>
@@ -84,7 +84,7 @@ import { VueElement } from 'vue';
                 <input class="form-control" type="file" name="file" ref="post_image" accept="image/png, image/jpeg" @change="handleFileUpload( $event )" required/>
             </div>
             <div class="form-group">
-                <button class="btn btn-primary" @click="postItem">SUBMIT</button>
+                <button class="btn btn-primary">SUBMIT</button>
             </div>
         </form>
       </div>
