@@ -92,3 +92,13 @@ def logout_view(request):
     logout(request)
     return redirect('home-view')
 
+
+from django.shortcuts import render_to_response
+from django.template import RequestContext
+
+def page404(request):
+    response = render_to_response('index.html', {},
+                                  context_instance=RequestContext(request))
+    response.status_code = 404
+    return response
+
