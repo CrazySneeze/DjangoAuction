@@ -89,7 +89,7 @@ def logout_view(request):
     print('logout requested')
     logout(request)
     return redirect('home-view')
-    
 
-def page404(request):
+
+def page404(request, exception):
     return render(request, 'index.html')
