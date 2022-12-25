@@ -17,4 +17,4 @@ urlpatterns = [
     path('frontend/', frontend_view, name= 'listings'),
     path('', login_view, name='index'),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
-handler404 = page404
+#handler404 = page404
