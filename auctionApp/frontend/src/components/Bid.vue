@@ -41,6 +41,8 @@
                         };
 
                         this.getResult = data;
+                        (this.$refs.post_bid as any).value = null;
+                        alert("Bid Placed")
                     }
                     else {console.warn("question is empty");}
 

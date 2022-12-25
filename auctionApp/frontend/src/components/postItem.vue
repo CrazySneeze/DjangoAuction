@@ -44,6 +44,13 @@ import { VueElement } from 'vue';
                         };
 
                         this.getResult = data;
+                        this.$refs.post_name = '';
+                        this.$refs.post_desc = '';
+                        this.$refs.post_startTime = null;
+                        this.$refs.post_endTime = null;
+                        this.$refs.post_startPrice = null;
+                        this.$refs.post_image = null;
+                        alert("Listing created successfully")
 
                 } catch (err) {
                     console.error(err);

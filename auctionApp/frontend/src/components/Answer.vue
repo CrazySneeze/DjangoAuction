@@ -51,6 +51,7 @@
                     };
 
                     this.getResult = data;
+                    (this.$refs.post_answer as any).value = '';
                     (this.$parent as any).getQuestion();
 
                 } catch (err) {
