@@ -2,9 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import User
 from .forms import RegisterForm, EditProfileForm
-from django.contrib.auth.forms import UserChangeForm
 # csrf_token = ''
 @login_required
 def profile_view(request):
@@ -91,14 +89,7 @@ def logout_view(request):
     print('logout requested')
     logout(request)
     return redirect('home-view')
-
-
-from django.shortcuts import render_to_response
-from django.template import RequestContext
+    
 
 def page404(request):
-    response = render_to_response('index.html', {},
-                                  context_instance=RequestContext(request))
-    response.status_code = 404
-    return response
-
+    return render(request, 'index.html')
