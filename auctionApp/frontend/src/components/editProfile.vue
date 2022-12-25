@@ -91,6 +91,7 @@ var _user: {username: string, email: string, DOB: Date}
                     body: JSON.stringify(payload)
                     });
                     alert('Saved')
+                    this.fetchUser();
                 }
                 catch(error){
                         console.log(error)

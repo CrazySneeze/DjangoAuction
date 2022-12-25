@@ -51,6 +51,7 @@
                     };
 
                     this.getResult = data;
+                    (this.$parent as any).getQuestion();
 
                 } catch (err) {
                     console.error(err);

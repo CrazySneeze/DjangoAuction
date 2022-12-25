@@ -39,6 +39,7 @@
                         };
 
                         this.getResult = data;
+                        (this.$parent as any).getQuestion();
                     }
                     else {console.warn("question is empty");}
 
